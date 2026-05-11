@@ -1,0 +1,1630 @@
+<!DOCTYPE html>
+        <html><head><meta charset="UTF-8"><title>🏆 Startup Analysis Report</title>
+        <style>
+            *{margin:0;padding:0;box-sizing:border-box;}
+            body{font-family:'Inter',sans-serif;background:#f2f4f8;padding:40px 20px;}
+            .container{max-width:1200px;margin:0 auto;}
+            
+            /* TESTATA REPORT CON SIMBOLO BANCA */
+            .report-header {
+                background: #e6f0fa;
+                border-radius: 32px;
+                padding: 45px 50px;
+                margin-bottom: 40px;
+                text-align: center;
+                box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+                border: 1px solid #c5d5e8;
+            }
+            .report-header .bank-icon-header {
+                font-size: 2.5rem;
+                color: #1a5d8f;
+                margin-bottom: 15px;
+            }
+            .report-header .sportello {
+                font-size: 1.2rem;
+                font-weight: 800;
+                color: #1a5d8f;
+                display: inline-block;
+                margin-bottom: 20px;
+                letter-spacing: 1.5px;
+            }
+            .report-header h1 {
+                font-size: 2.5rem;
+                font-weight: 900;
+                color: #d97a2b;
+                margin-bottom: 15px;
+                letter-spacing: -1px;
+            }
+            .report-header h1 i {
+                color: #d97a2b;
+                margin-right: 12px;
+            }
+            .report-header .subtitle {
+                font-size: 1.1rem;
+                font-weight: 600;
+                color: #2c5a7a;
+                margin-bottom: 25px;
+            }
+            .report-header .description {
+                font-size: 0.95rem;
+                line-height: 1.6;
+                color: #1a2a3a;
+                text-align: left;
+                margin-top: 20px;
+            }
+            .stats-report {
+                display: flex;
+                justify-content: center;
+                gap: 40px;
+                margin: 30px 0 0;
+                flex-wrap: wrap;
+            }
+            .stat-report {
+                background: rgba(255,255,255,0.7);
+                padding: 14px 32px;
+                border-radius: 60px;
+                font-size: 0.95rem;
+                font-weight: 800;
+                color: #1a2a3a;
+                border: 1px solid #c5d5e8;
+            }
+            .stat-report strong {
+                color: #d97a2b;
+                font-size: 1.1rem;
+            }
+            
+            .ranking-table{
+                width:100%;
+                background:white;
+                border-radius:24px;
+                overflow:hidden;
+                margin-bottom:30px;
+                box-shadow:0 4px 16px rgba(0,0,0,0.06);
+            }
+            .ranking-table th{
+                background:linear-gradient(135deg,#1a2a3a,#1a3a5a);
+                color:white;
+                padding:16px;
+                text-align:left;
+                font-size:0.85rem;
+            }
+            .ranking-table td{
+                padding:14px;
+                border-bottom:1px solid #eef2f7;
+                font-size:0.9rem;
+                color:#1a2a3a;
+            }
+            .rating-badge{display:inline-flex;align-items:center;gap:14px;padding:10px 24px;border-radius:60px;font-weight:800;font-size:0.9rem;}
+            .rating-ammesso{background:#d1fae5;color:#059669;}
+            .rating-riserva{background:#fef3c7;color:#b45309;}
+            .rating-nonammesso{background:#fee2e2;color:#dc2626;}
+            .rating-descrizione{font-size:0.8rem;color:#1a2a3a;padding-left:14px;border-left:4px solid #d97a2b;}
+            .footer{background:#f8fafc;border-radius:24px;padding:24px;text-align:center;margin-top:32px;font-size:0.75rem;color:#555;}
+            @media(max-width:700px){
+                .stat-report{padding:8px 16px; font-size:0.8rem;}
+                .report-header h1{font-size:1.8rem;}
+                .report-header .subtitle{font-size:0.9rem;}
+                .report-header{padding:30px 20px;}
+            }
+        </style>
+        </head>
+        <body>
+        <div class="container">
+            <div class="report-header">
+                <div class="bank-icon-header"><i class="fas fa-university"></i></div>
+                <div class="sportello">SPORTELLO IMPRESE</div>
+                <h1><i class="fas fa-chart-line"></i> CREDIT SCORING</h1>
+                <div class="subtitle">Valutazione Progetti d'Impresa | 🎯 Soglia di Finanziabilità: 60/100</div>
+                <div class="description">
+                    📋 <strong>Documento di sintesi sull'attitudine al finanziamento e sulla sostenibilità dei modelli di business presentati.</strong><br><br>
+                    Questo report rappresenta l'analisi tecnica di 10 Startup. Ogni progetto è stato esaminato come se fosse presentato allo sportello "Imprese" di una banca, valutando se l'idea è sostenibile, se il capitale è congruo e se il team ha le competenze (Hard & Soft Skills) necessarie per vincere sul mercato. 💪
+                </div>
+                <div class="stats-report">
+                    <div class="stat-report">📊 <strong>10</strong> Startup valutate</div>
+                    <div class="stat-report">🏆 <strong>8</strong> Startup finanziate</div>
+                    <div class="stat-report">⭐ <strong>61.9</strong> media punteggi</div>
+                </div>
+            </div>
+            
+            <h2 style="color:#1a2a3a; margin:30px 0 20px; font-size:1.4rem;">🏆 Classifica Generale</h2>
+            <table class="ranking-table"><thead><tr><th>Pos</th><th>Startup</th><th>Punteggio</th><th>Rating</th></tr></thead><tbody><tr><td style="text-align:center; font-size:1.3rem;">🥇</td>
+                <td><strong>De Vitis Global Logistics S.p.A.</strong></td>
+                <td>64.5/100</td>
+                <td><span style="font-size:0.9rem;">⭐⭐⭐</span> ✅ AMMESSA (Rating B+)</td>
+            </tr><tr><td style="text-align:center; font-size:1.3rem;">🥈</td>
+                <td><strong>studio commercialista Parlangeli &amp; Paladini</strong></td>
+                <td>63.2/100</td>
+                <td><span style="font-size:0.9rem;">⭐⭐⭐</span> ✅ AMMESSA (Rating B+)</td>
+            </tr><tr><td style="text-align:center; font-size:1.3rem;">🥉</td>
+                <td><strong>Studio associato pubblicità on the road s.p.a</strong></td>
+                <td>63.0/100</td>
+                <td><span style="font-size:0.9rem;">⭐⭐⭐</span> ✅ AMMESSA (Rating B+)</td>
+            </tr><tr><td style="text-align:center; font-size:1.3rem;">4</td>
+                <td><strong>Materia e rito S.p.A.</strong></td>
+                <td>62.8/100</td>
+                <td><span style="font-size:0.9rem;">⭐⭐⭐</span> ✅ AMMESSA (Rating B+)</td>
+            </tr><tr><td style="text-align:center; font-size:1.3rem;">5</td>
+                <td><strong>Specialisti Di Stempiature e Trapianto di Capelli</strong></td>
+                <td>62.7/100</td>
+                <td><span style="font-size:0.9rem;">⭐⭐⭐</span> ✅ AMMESSA (Rating B+)</td>
+            </tr><tr><td style="text-align:center; font-size:1.3rem;">6</td>
+                <td><strong>Le fan di Tino s.r.l.</strong></td>
+                <td>62.1/100</td>
+                <td><span style="font-size:0.9rem;">⭐⭐⭐</span> ✅ AMMESSA (Rating B+)</td>
+            </tr><tr><td style="text-align:center; font-size:1.3rem;">7</td>
+                <td><strong>Studio aura J&amp;D</strong></td>
+                <td>61.4/100</td>
+                <td><span style="font-size:0.9rem;">⭐⭐⭐</span> ✅ AMMESSA (Rating B+)</td>
+            </tr><tr><td style="text-align:center; font-size:1.3rem;">8</td>
+                <td><strong>Caramelle x tutti</strong></td>
+                <td>60.7/100</td>
+                <td><span style="font-size:0.9rem;">⭐⭐⭐</span> ✅ AMMESSA (Rating B+)</td>
+            </tr><tr><td style="text-align:center; font-size:1.3rem;">9</td>
+                <td><strong>Rescio's rooms S.r.l.s.</strong></td>
+                <td>59.8/100</td>
+                <td><span style="font-size:0.9rem;">⭐⭐</span> ⚠️ AMMESSA CON RISERVA (Rating B)</td>
+            </tr><tr><td style="text-align:center; font-size:1.3rem;">10</td>
+                <td><strong>Studio Creazione armi Tommy&amp;Depa</strong></td>
+                <td>58.9/100</td>
+                <td><span style="font-size:0.9rem;">⭐⭐</span> ⚠️ AMMESSA CON RISERVA (Rating B)</td>
+            </tr></tbody></table>
+            
+            <h2 style="color:#1a2a3a; margin:30px 0 20px; font-size:1.4rem;">📋 Valutazioni Dettagliate</h2>
+            
+                <div style="background:white; border-radius:28px; margin-bottom:28px; overflow:hidden; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
+                    <div style="background:linear-gradient(135deg,#1a2a3a,#1a3a5a); color:white; padding:16px 24px;">
+                        <strong>📄 De Vitis Global Logistics S.p.A.</strong> - Punteggio: 64.5/100
+                    </div>
+                    <div style="padding:24px;">
+                        <div class="rating-badge rating-ammesso" style="margin-bottom:12px;">
+                            <span class="stars-rating">⭐⭐⭐</span>
+                            <span>✅ AMMESSA (Rating B+)</span>
+                        </div>
+                        <div class="rating-descrizione" style="margin-bottom:24px;">Startup sufficiente. Coerenza di base. Richiede qualche miglioramento.</div>
+                        
+                        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:16px; margin-bottom:24px;">
+                            
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">📋</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">COMPLETEZZA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">7.6<span style="font-size:0.75rem; color:#555;">/10</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:76%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">⚖️</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">COERENZA GIURIDICA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">9.0<span style="font-size:0.75rem; color:#555;">/12</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:75%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">💰</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">SOLIDITÀ FINANZIARIA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">6.5<span style="font-size:0.75rem; color:#555;">/15</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:43.333333333333336%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🎯</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">PIANO STRATEGICO</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">12.0<span style="font-size:0.75rem; color:#555;">/12</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:100%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🧠</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">CONSAPEVOLEZZA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">8.0<span style="font-size:0.75rem; color:#555;">/8</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:100%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🎨</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">BRANDING & DESIGN</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">6.5<span style="font-size:0.75rem; color:#555;">/8</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:81.25%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🚀</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">INNOVAZIONE</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">14.5<span style="font-size:0.75rem; color:#555;">/35</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:41.42857142857143%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                        </div>
+                        
+                    <div style="margin-top:20px; background:#f0f7ff; border-radius:20px; padding:20px;">
+                        <div style="display:flex; align-items:center; gap:14px; margin-bottom:16px; flex-wrap:wrap;">
+                            <div style="font-weight:800; font-size:1.1rem; color:#1a2a3a;">💡 Valutazione dell'idea</div>
+                            <div style="background:#dc2626; color:white; padding:6px 16px; border-radius:40px; font-size:0.8rem; font-weight:700;">
+                                📋 BASILARE
+                            </div>
+                            <div style="font-size:0.8rem; background:white; padding:4px 14px; border-radius:40px; color:#1a2a3a;">41.5/100</div>
+                        </div>
+                        <div style="background:#e6f0fa; border-radius:16px; padding:16px 20px; margin-bottom:16px; border-left:5px solid #d97a2b;">
+                            <div style="font-size:0.9rem; font-weight:700; color:#1a2a3a; margin-bottom:6px;">🎯 PERCHÉ QUESTO GIUDIZIO</div>
+                            <div style="font-size:0.85rem; color:#1a2a3a; line-height:1.5;">Idea tradizionale. Serve aggiungere elementi più innovativi. Originalità da migliorare. Modello di business tradizionale.</div>
+                        </div>
+                        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px;">
+                            
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Originalità del concetto</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">4.0/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:26.666666666666668%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Innovazione nel modello di business</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">5.4/20</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:27%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Differenziazione dai competitor</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">3.0/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:20%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Allineamento ai trend</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">10.0/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:66.66666666666666%; height:100%; background:#f59e0b; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Scalabilità e potenziale</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">6.5/10</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:65%; height:100%; background:#f59e0b; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Sostenibilità economica</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">5.0/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:33.33333333333333%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Innovazione sociale/ambientale</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">7.6/10</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:76%; height:100%; background:#10b981; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                        </div>
+                    </div>
+                
+                        
+                    <div style="margin-top:16px; background:#e6f0fa; border-radius:20px; padding:18px; border:1px solid #c5d5e8;">
+                        <div style="font-weight:800; margin-bottom:14px; color:#1a2a3a; display:flex; align-items:center; gap:10px;">
+                            <i class="fas fa-chart-line" style="color:#d97a2b;"></i> 📈 Trend di mercato rilevati
+                        </div>
+                        <div style="background:white; border-radius:16px; padding:12px; margin-bottom:14px;">
+                            💡 <strong>Cosa significa?</strong> Questi trend indicano che la Startup è allineata alle richieste del mercato nel 2026.
+                            Ogni trend soddisfatto aumenta le possibilità di successo dell'idea.
+                        </div>
+                        
+                            <div style="margin-bottom:12px; padding:12px; background:white; border-radius:16px; border-left:4px solid #d97a2b;">
+                                <div style="font-weight:700; font-size:0.85rem; color:#1a2a3a;">Intelligenza Artificiale</div>
+                                <div style="font-size:0.75rem; color:#555;">🤖 L'AI automatizza processi come quotazioni, prenotazioni e ottimizzazione percorsi</div>
+                            </div>
+                        
+                            <div style="margin-bottom:12px; padding:12px; background:white; border-radius:16px; border-left:4px solid #d97a2b;">
+                                <div style="font-weight:700; font-size:0.85rem; color:#1a2a3a;">Sostenibilità</div>
+                                <div style="font-size:0.75rem; color:#555;">🌱 Veicoli elettrici, riduzione emissioni, packaging eco-friendly</div>
+                            </div>
+                        
+                            <div style="margin-bottom:12px; padding:12px; background:white; border-radius:16px; border-left:4px solid #d97a2b;">
+                                <div style="font-weight:700; font-size:0.85rem; color:#1a2a3a;">Digitalizzazione</div>
+                                <div style="font-size:0.75rem; color:#555;">💻 Piattaforme digitali, cloud, automazione documentale</div>
+                            </div>
+                        
+                    </div>
+                
+                    </div>
+                </div>
+            
+                <div style="background:white; border-radius:28px; margin-bottom:28px; overflow:hidden; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
+                    <div style="background:linear-gradient(135deg,#1a2a3a,#1a3a5a); color:white; padding:16px 24px;">
+                        <strong>📄 studio commercialista Parlangeli &amp; Paladini</strong> - Punteggio: 63.2/100
+                    </div>
+                    <div style="padding:24px;">
+                        <div class="rating-badge rating-ammesso" style="margin-bottom:12px;">
+                            <span class="stars-rating">⭐⭐⭐</span>
+                            <span>✅ AMMESSA (Rating B+)</span>
+                        </div>
+                        <div class="rating-descrizione" style="margin-bottom:24px;">Startup sufficiente. Coerenza di base. Richiede qualche miglioramento.</div>
+                        
+                        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:16px; margin-bottom:24px;">
+                            
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">📋</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">COMPLETEZZA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">7.6<span style="font-size:0.75rem; color:#555;">/10</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:76%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">⚖️</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">COERENZA GIURIDICA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">9.0<span style="font-size:0.75rem; color:#555;">/12</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:75%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">💰</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">SOLIDITÀ FINANZIARIA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">6.5<span style="font-size:0.75rem; color:#555;">/15</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:43.333333333333336%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🎯</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">PIANO STRATEGICO</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">12.0<span style="font-size:0.75rem; color:#555;">/12</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:100%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🧠</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">CONSAPEVOLEZZA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">8.0<span style="font-size:0.75rem; color:#555;">/8</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:100%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🎨</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">BRANDING & DESIGN</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">6.5<span style="font-size:0.75rem; color:#555;">/8</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:81.25%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🚀</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">INNOVAZIONE</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">13.4<span style="font-size:0.75rem; color:#555;">/35</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:38.285714285714285%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                        </div>
+                        
+                    <div style="margin-top:20px; background:#f0f7ff; border-radius:20px; padding:20px;">
+                        <div style="display:flex; align-items:center; gap:14px; margin-bottom:16px; flex-wrap:wrap;">
+                            <div style="font-weight:800; font-size:1.1rem; color:#1a2a3a;">💡 Valutazione dell'idea</div>
+                            <div style="background:#dc2626; color:white; padding:6px 16px; border-radius:40px; font-size:0.8rem; font-weight:700;">
+                                ⚠️ LIMITATO
+                            </div>
+                            <div style="font-size:0.8rem; background:white; padding:4px 14px; border-radius:40px; color:#1a2a3a;">38.2/100</div>
+                        </div>
+                        <div style="background:#e6f0fa; border-radius:16px; padding:16px 20px; margin-bottom:16px; border-left:5px solid #d97a2b;">
+                            <div style="font-size:0.9rem; font-weight:700; color:#1a2a3a; margin-bottom:6px;">🎯 PERCHÉ QUESTO GIUDIZIO</div>
+                            <div style="font-size:0.85rem; color:#1a2a3a; line-height:1.5;">Idea poco originale. Necessario rivedere il concept. Originalità da migliorare. Modello di business tradizionale.</div>
+                        </div>
+                        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px;">
+                            
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Originalità del concetto</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">4.0/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:26.666666666666668%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Innovazione nel modello di business</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">5.4/20</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:27%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Differenziazione dai competitor</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">3.0/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:20%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Allineamento ai trend</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">7.5/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:50%; height:100%; background:#f59e0b; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Scalabilità e potenziale</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">6.5/10</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:65%; height:100%; background:#f59e0b; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Sostenibilità economica</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">5.0/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:33.33333333333333%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Innovazione sociale/ambientale</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">6.8/10</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:68%; height:100%; background:#f59e0b; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                        </div>
+                    </div>
+                
+                        
+                    <div style="margin-top:16px; background:#e6f0fa; border-radius:20px; padding:18px; border:1px solid #c5d5e8;">
+                        <div style="font-weight:800; margin-bottom:14px; color:#1a2a3a; display:flex; align-items:center; gap:10px;">
+                            <i class="fas fa-chart-line" style="color:#d97a2b;"></i> 📈 Trend di mercato rilevati
+                        </div>
+                        <div style="background:white; border-radius:16px; padding:12px; margin-bottom:14px;">
+                            💡 <strong>Cosa significa?</strong> Questi trend indicano che la Startup è allineata alle richieste del mercato nel 2026.
+                            Ogni trend soddisfatto aumenta le possibilità di successo dell'idea.
+                        </div>
+                        
+                            <div style="margin-bottom:12px; padding:12px; background:white; border-radius:16px; border-left:4px solid #d97a2b;">
+                                <div style="font-weight:700; font-size:0.85rem; color:#1a2a3a;">Intelligenza Artificiale</div>
+                                <div style="font-size:0.75rem; color:#555;">🤖 L'AI automatizza processi come quotazioni, prenotazioni e ottimizzazione percorsi</div>
+                            </div>
+                        
+                            <div style="margin-bottom:12px; padding:12px; background:white; border-radius:16px; border-left:4px solid #d97a2b;">
+                                <div style="font-weight:700; font-size:0.85rem; color:#1a2a3a;">Digitalizzazione</div>
+                                <div style="font-size:0.75rem; color:#555;">💻 Piattaforme digitali, cloud, automazione documentale</div>
+                            </div>
+                        
+                    </div>
+                
+                    </div>
+                </div>
+            
+                <div style="background:white; border-radius:28px; margin-bottom:28px; overflow:hidden; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
+                    <div style="background:linear-gradient(135deg,#1a2a3a,#1a3a5a); color:white; padding:16px 24px;">
+                        <strong>📄 Studio associato pubblicità on the road s.p.a</strong> - Punteggio: 63.0/100
+                    </div>
+                    <div style="padding:24px;">
+                        <div class="rating-badge rating-ammesso" style="margin-bottom:12px;">
+                            <span class="stars-rating">⭐⭐⭐</span>
+                            <span>✅ AMMESSA (Rating B+)</span>
+                        </div>
+                        <div class="rating-descrizione" style="margin-bottom:24px;">Startup sufficiente. Coerenza di base. Richiede qualche miglioramento.</div>
+                        
+                        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:16px; margin-bottom:24px;">
+                            
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">📋</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">COMPLETEZZA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">7.6<span style="font-size:0.75rem; color:#555;">/10</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:76%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">⚖️</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">COERENZA GIURIDICA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">9.0<span style="font-size:0.75rem; color:#555;">/12</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:75%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">💰</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">SOLIDITÀ FINANZIARIA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">6.5<span style="font-size:0.75rem; color:#555;">/15</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:43.333333333333336%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🎯</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">PIANO STRATEGICO</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">12.0<span style="font-size:0.75rem; color:#555;">/12</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:100%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🧠</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">CONSAPEVOLEZZA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">8.0<span style="font-size:0.75rem; color:#555;">/8</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:100%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🎨</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">BRANDING & DESIGN</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">6.5<span style="font-size:0.75rem; color:#555;">/8</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:81.25%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🚀</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">INNOVAZIONE</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">13.4<span style="font-size:0.75rem; color:#555;">/35</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:38.285714285714285%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                        </div>
+                        
+                    <div style="margin-top:20px; background:#f0f7ff; border-radius:20px; padding:20px;">
+                        <div style="display:flex; align-items:center; gap:14px; margin-bottom:16px; flex-wrap:wrap;">
+                            <div style="font-weight:800; font-size:1.1rem; color:#1a2a3a;">💡 Valutazione dell'idea</div>
+                            <div style="background:#dc2626; color:white; padding:6px 16px; border-radius:40px; font-size:0.8rem; font-weight:700;">
+                                ⚠️ LIMITATO
+                            </div>
+                            <div style="font-size:0.8rem; background:white; padding:4px 14px; border-radius:40px; color:#1a2a3a;">38.2/100</div>
+                        </div>
+                        <div style="background:#e6f0fa; border-radius:16px; padding:16px 20px; margin-bottom:16px; border-left:5px solid #d97a2b;">
+                            <div style="font-size:0.9rem; font-weight:700; color:#1a2a3a; margin-bottom:6px;">🎯 PERCHÉ QUESTO GIUDIZIO</div>
+                            <div style="font-size:0.85rem; color:#1a2a3a; line-height:1.5;">Idea poco originale. Necessario rivedere il concept. Originalità da migliorare. Modello di business tradizionale.</div>
+                        </div>
+                        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px;">
+                            
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Originalità del concetto</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">4.0/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:26.666666666666668%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Innovazione nel modello di business</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">5.4/20</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:27%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Differenziazione dai competitor</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">3.0/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:20%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Allineamento ai trend</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">7.5/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:50%; height:100%; background:#f59e0b; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Scalabilità e potenziale</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">6.5/10</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:65%; height:100%; background:#f59e0b; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Sostenibilità economica</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">5.0/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:33.33333333333333%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Innovazione sociale/ambientale</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">6.8/10</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:68%; height:100%; background:#f59e0b; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                        </div>
+                    </div>
+                
+                        
+                    <div style="margin-top:16px; background:#e6f0fa; border-radius:20px; padding:18px; border:1px solid #c5d5e8;">
+                        <div style="font-weight:800; margin-bottom:14px; color:#1a2a3a; display:flex; align-items:center; gap:10px;">
+                            <i class="fas fa-chart-line" style="color:#d97a2b;"></i> 📈 Trend di mercato rilevati
+                        </div>
+                        <div style="background:white; border-radius:16px; padding:12px; margin-bottom:14px;">
+                            💡 <strong>Cosa significa?</strong> Questi trend indicano che la Startup è allineata alle richieste del mercato nel 2026.
+                            Ogni trend soddisfatto aumenta le possibilità di successo dell'idea.
+                        </div>
+                        
+                            <div style="margin-bottom:12px; padding:12px; background:white; border-radius:16px; border-left:4px solid #d97a2b;">
+                                <div style="font-weight:700; font-size:0.85rem; color:#1a2a3a;">Intelligenza Artificiale</div>
+                                <div style="font-size:0.75rem; color:#555;">🤖 L'AI automatizza processi come quotazioni, prenotazioni e ottimizzazione percorsi</div>
+                            </div>
+                        
+                            <div style="margin-bottom:12px; padding:12px; background:white; border-radius:16px; border-left:4px solid #d97a2b;">
+                                <div style="font-weight:700; font-size:0.85rem; color:#1a2a3a;">Digitalizzazione</div>
+                                <div style="font-size:0.75rem; color:#555;">💻 Piattaforme digitali, cloud, automazione documentale</div>
+                            </div>
+                        
+                    </div>
+                
+                    </div>
+                </div>
+            
+                <div style="background:white; border-radius:28px; margin-bottom:28px; overflow:hidden; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
+                    <div style="background:linear-gradient(135deg,#1a2a3a,#1a3a5a); color:white; padding:16px 24px;">
+                        <strong>📄 Materia e rito S.p.A.</strong> - Punteggio: 62.8/100
+                    </div>
+                    <div style="padding:24px;">
+                        <div class="rating-badge rating-ammesso" style="margin-bottom:12px;">
+                            <span class="stars-rating">⭐⭐⭐</span>
+                            <span>✅ AMMESSA (Rating B+)</span>
+                        </div>
+                        <div class="rating-descrizione" style="margin-bottom:24px;">Startup sufficiente. Coerenza di base. Richiede qualche miglioramento.</div>
+                        
+                        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:16px; margin-bottom:24px;">
+                            
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">📋</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">COMPLETEZZA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">7.6<span style="font-size:0.75rem; color:#555;">/10</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:76%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">⚖️</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">COERENZA GIURIDICA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">9.0<span style="font-size:0.75rem; color:#555;">/12</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:75%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">💰</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">SOLIDITÀ FINANZIARIA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">6.5<span style="font-size:0.75rem; color:#555;">/15</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:43.333333333333336%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🎯</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">PIANO STRATEGICO</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">12.0<span style="font-size:0.75rem; color:#555;">/12</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:100%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🧠</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">CONSAPEVOLEZZA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">8.0<span style="font-size:0.75rem; color:#555;">/8</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:100%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🎨</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">BRANDING & DESIGN</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">6.5<span style="font-size:0.75rem; color:#555;">/8</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:81.25%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🚀</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">INNOVAZIONE</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">13.1<span style="font-size:0.75rem; color:#555;">/35</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:37.42857142857143%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                        </div>
+                        
+                    <div style="margin-top:20px; background:#f0f7ff; border-radius:20px; padding:20px;">
+                        <div style="display:flex; align-items:center; gap:14px; margin-bottom:16px; flex-wrap:wrap;">
+                            <div style="font-weight:800; font-size:1.1rem; color:#1a2a3a;">💡 Valutazione dell'idea</div>
+                            <div style="background:#dc2626; color:white; padding:6px 16px; border-radius:40px; font-size:0.8rem; font-weight:700;">
+                                ⚠️ LIMITATO
+                            </div>
+                            <div style="font-size:0.8rem; background:white; padding:4px 14px; border-radius:40px; color:#1a2a3a;">37.3/100</div>
+                        </div>
+                        <div style="background:#e6f0fa; border-radius:16px; padding:16px 20px; margin-bottom:16px; border-left:5px solid #d97a2b;">
+                            <div style="font-size:0.9rem; font-weight:700; color:#1a2a3a; margin-bottom:6px;">🎯 PERCHÉ QUESTO GIUDIZIO</div>
+                            <div style="font-size:0.85rem; color:#1a2a3a; line-height:1.5;">Idea poco originale. Necessario rivedere il concept. Originalità da migliorare. Modello di business tradizionale.</div>
+                        </div>
+                        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px;">
+                            
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Originalità del concetto</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">4.0/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:26.666666666666668%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Innovazione nel modello di business</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">4.2/20</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:21.000000000000004%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Differenziazione dai competitor</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">3.0/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:20%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Allineamento ai trend</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">7.5/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:50%; height:100%; background:#f59e0b; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Scalabilità e potenziale</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">8.0/10</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:80%; height:100%; background:#10b981; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Sostenibilità economica</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">5.0/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:33.33333333333333%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Innovazione sociale/ambientale</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">5.6/10</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:55.99999999999999%; height:100%; background:#f59e0b; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                        </div>
+                    </div>
+                
+                        
+                    <div style="margin-top:16px; background:#e6f0fa; border-radius:20px; padding:18px; border:1px solid #c5d5e8;">
+                        <div style="font-weight:800; margin-bottom:14px; color:#1a2a3a; display:flex; align-items:center; gap:10px;">
+                            <i class="fas fa-chart-line" style="color:#d97a2b;"></i> 📈 Trend di mercato rilevati
+                        </div>
+                        <div style="background:white; border-radius:16px; padding:12px; margin-bottom:14px;">
+                            💡 <strong>Cosa significa?</strong> Questi trend indicano che la Startup è allineata alle richieste del mercato nel 2026.
+                            Ogni trend soddisfatto aumenta le possibilità di successo dell'idea.
+                        </div>
+                        
+                            <div style="margin-bottom:12px; padding:12px; background:white; border-radius:16px; border-left:4px solid #d97a2b;">
+                                <div style="font-weight:700; font-size:0.85rem; color:#1a2a3a;">Sostenibilità</div>
+                                <div style="font-size:0.75rem; color:#555;">🌱 Veicoli elettrici, riduzione emissioni, packaging eco-friendly</div>
+                            </div>
+                        
+                            <div style="margin-bottom:12px; padding:12px; background:white; border-radius:16px; border-left:4px solid #d97a2b;">
+                                <div style="font-weight:700; font-size:0.85rem; color:#1a2a3a;">Digitalizzazione</div>
+                                <div style="font-size:0.75rem; color:#555;">💻 Piattaforme digitali, cloud, automazione documentale</div>
+                            </div>
+                        
+                    </div>
+                
+                    </div>
+                </div>
+            
+                <div style="background:white; border-radius:28px; margin-bottom:28px; overflow:hidden; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
+                    <div style="background:linear-gradient(135deg,#1a2a3a,#1a3a5a); color:white; padding:16px 24px;">
+                        <strong>📄 Specialisti Di Stempiature e Trapianto di Capelli</strong> - Punteggio: 62.7/100
+                    </div>
+                    <div style="padding:24px;">
+                        <div class="rating-badge rating-ammesso" style="margin-bottom:12px;">
+                            <span class="stars-rating">⭐⭐⭐</span>
+                            <span>✅ AMMESSA (Rating B+)</span>
+                        </div>
+                        <div class="rating-descrizione" style="margin-bottom:24px;">Startup sufficiente. Coerenza di base. Richiede qualche miglioramento.</div>
+                        
+                        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:16px; margin-bottom:24px;">
+                            
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">📋</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">COMPLETEZZA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">7.6<span style="font-size:0.75rem; color:#555;">/10</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:76%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">⚖️</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">COERENZA GIURIDICA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">9.0<span style="font-size:0.75rem; color:#555;">/12</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:75%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">💰</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">SOLIDITÀ FINANZIARIA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">6.5<span style="font-size:0.75rem; color:#555;">/15</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:43.333333333333336%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🎯</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">PIANO STRATEGICO</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">12.0<span style="font-size:0.75rem; color:#555;">/12</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:100%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🧠</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">CONSAPEVOLEZZA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">8.0<span style="font-size:0.75rem; color:#555;">/8</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:100%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🎨</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">BRANDING & DESIGN</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">6.5<span style="font-size:0.75rem; color:#555;">/8</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:81.25%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🚀</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">INNOVAZIONE</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">12.8<span style="font-size:0.75rem; color:#555;">/35</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:36.57142857142857%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                        </div>
+                        
+                    <div style="margin-top:20px; background:#f0f7ff; border-radius:20px; padding:20px;">
+                        <div style="display:flex; align-items:center; gap:14px; margin-bottom:16px; flex-wrap:wrap;">
+                            <div style="font-weight:800; font-size:1.1rem; color:#1a2a3a;">💡 Valutazione dell'idea</div>
+                            <div style="background:#dc2626; color:white; padding:6px 16px; border-radius:40px; font-size:0.8rem; font-weight:700;">
+                                ⚠️ LIMITATO
+                            </div>
+                            <div style="font-size:0.8rem; background:white; padding:4px 14px; border-radius:40px; color:#1a2a3a;">36.7/100</div>
+                        </div>
+                        <div style="background:#e6f0fa; border-radius:16px; padding:16px 20px; margin-bottom:16px; border-left:5px solid #d97a2b;">
+                            <div style="font-size:0.9rem; font-weight:700; color:#1a2a3a; margin-bottom:6px;">🎯 PERCHÉ QUESTO GIUDIZIO</div>
+                            <div style="font-size:0.85rem; color:#1a2a3a; line-height:1.5;">Idea poco originale. Necessario rivedere il concept. Originalità da migliorare. Modello di business tradizionale.</div>
+                        </div>
+                        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px;">
+                            
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Originalità del concetto</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">4.0/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:26.666666666666668%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Innovazione nel modello di business</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">6.6/20</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:32.99999999999999%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Differenziazione dai competitor</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">3.0/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:20%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Allineamento ai trend</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">7.5/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:50%; height:100%; background:#f59e0b; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Scalabilità e potenziale</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">5.0/10</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:50%; height:100%; background:#f59e0b; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Sostenibilità economica</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">5.0/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:33.33333333333333%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Innovazione sociale/ambientale</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">5.6/10</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:55.99999999999999%; height:100%; background:#f59e0b; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                        </div>
+                    </div>
+                
+                        
+                    <div style="margin-top:16px; background:#e6f0fa; border-radius:20px; padding:18px; border:1px solid #c5d5e8;">
+                        <div style="font-weight:800; margin-bottom:14px; color:#1a2a3a; display:flex; align-items:center; gap:10px;">
+                            <i class="fas fa-chart-line" style="color:#d97a2b;"></i> 📈 Trend di mercato rilevati
+                        </div>
+                        <div style="background:white; border-radius:16px; padding:12px; margin-bottom:14px;">
+                            💡 <strong>Cosa significa?</strong> Questi trend indicano che la Startup è allineata alle richieste del mercato nel 2026.
+                            Ogni trend soddisfatto aumenta le possibilità di successo dell'idea.
+                        </div>
+                        
+                            <div style="margin-bottom:12px; padding:12px; background:white; border-radius:16px; border-left:4px solid #d97a2b;">
+                                <div style="font-weight:700; font-size:0.85rem; color:#1a2a3a;">Intelligenza Artificiale</div>
+                                <div style="font-size:0.75rem; color:#555;">🤖 L'AI automatizza processi come quotazioni, prenotazioni e ottimizzazione percorsi</div>
+                            </div>
+                        
+                            <div style="margin-bottom:12px; padding:12px; background:white; border-radius:16px; border-left:4px solid #d97a2b;">
+                                <div style="font-weight:700; font-size:0.85rem; color:#1a2a3a;">Digitalizzazione</div>
+                                <div style="font-size:0.75rem; color:#555;">💻 Piattaforme digitali, cloud, automazione documentale</div>
+                            </div>
+                        
+                    </div>
+                
+                    </div>
+                </div>
+            
+                <div style="background:white; border-radius:28px; margin-bottom:28px; overflow:hidden; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
+                    <div style="background:linear-gradient(135deg,#1a2a3a,#1a3a5a); color:white; padding:16px 24px;">
+                        <strong>📄 Le fan di Tino s.r.l.</strong> - Punteggio: 62.1/100
+                    </div>
+                    <div style="padding:24px;">
+                        <div class="rating-badge rating-ammesso" style="margin-bottom:12px;">
+                            <span class="stars-rating">⭐⭐⭐</span>
+                            <span>✅ AMMESSA (Rating B+)</span>
+                        </div>
+                        <div class="rating-descrizione" style="margin-bottom:24px;">Startup sufficiente. Coerenza di base. Richiede qualche miglioramento.</div>
+                        
+                        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:16px; margin-bottom:24px;">
+                            
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">📋</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">COMPLETEZZA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">7.6<span style="font-size:0.75rem; color:#555;">/10</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:76%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">⚖️</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">COERENZA GIURIDICA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">9.0<span style="font-size:0.75rem; color:#555;">/12</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:75%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">💰</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">SOLIDITÀ FINANZIARIA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">6.5<span style="font-size:0.75rem; color:#555;">/15</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:43.333333333333336%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🎯</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">PIANO STRATEGICO</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">12.0<span style="font-size:0.75rem; color:#555;">/12</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:100%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🧠</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">CONSAPEVOLEZZA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">8.0<span style="font-size:0.75rem; color:#555;">/8</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:100%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🎨</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">BRANDING & DESIGN</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">6.5<span style="font-size:0.75rem; color:#555;">/8</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:81.25%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🚀</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">INNOVAZIONE</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">12.1<span style="font-size:0.75rem; color:#555;">/35</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:34.57142857142857%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                        </div>
+                        
+                    <div style="margin-top:20px; background:#f0f7ff; border-radius:20px; padding:20px;">
+                        <div style="display:flex; align-items:center; gap:14px; margin-bottom:16px; flex-wrap:wrap;">
+                            <div style="font-weight:800; font-size:1.1rem; color:#1a2a3a;">💡 Valutazione dell'idea</div>
+                            <div style="background:#dc2626; color:white; padding:6px 16px; border-radius:40px; font-size:0.8rem; font-weight:700;">
+                                ⚠️ LIMITATO
+                            </div>
+                            <div style="font-size:0.8rem; background:white; padding:4px 14px; border-radius:40px; color:#1a2a3a;">34.5/100</div>
+                        </div>
+                        <div style="background:#e6f0fa; border-radius:16px; padding:16px 20px; margin-bottom:16px; border-left:5px solid #d97a2b;">
+                            <div style="font-size:0.9rem; font-weight:700; color:#1a2a3a; margin-bottom:6px;">🎯 PERCHÉ QUESTO GIUDIZIO</div>
+                            <div style="font-size:0.85rem; color:#1a2a3a; line-height:1.5;">Idea poco originale. Necessario rivedere il concept. Originalità da migliorare. Modello di business tradizionale. Allineamento ai trend da migliorare.</div>
+                        </div>
+                        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px;">
+                            
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Originalità del concetto</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">4.0/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:26.666666666666668%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Innovazione nel modello di business</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">4.2/20</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:21.000000000000004%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Differenziazione dai competitor</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">3.0/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:20%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Allineamento ai trend</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">5.0/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:33.33333333333333%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Scalabilità e potenziale</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">6.5/10</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:65%; height:100%; background:#f59e0b; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Sostenibilità economica</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">5.0/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:33.33333333333333%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Innovazione sociale/ambientale</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">6.8/10</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:68%; height:100%; background:#f59e0b; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                        </div>
+                    </div>
+                
+                        
+                    <div style="margin-top:16px; background:#e6f0fa; border-radius:20px; padding:18px; border:1px solid #c5d5e8;">
+                        <div style="font-weight:800; margin-bottom:14px; color:#1a2a3a; display:flex; align-items:center; gap:10px;">
+                            <i class="fas fa-chart-line" style="color:#d97a2b;"></i> 📈 Trend di mercato rilevati
+                        </div>
+                        <div style="background:white; border-radius:16px; padding:12px; margin-bottom:14px;">
+                            💡 <strong>Cosa significa?</strong> Questi trend indicano che la Startup è allineata alle richieste del mercato nel 2026.
+                            Ogni trend soddisfatto aumenta le possibilità di successo dell'idea.
+                        </div>
+                        
+                            <div style="margin-bottom:12px; padding:12px; background:white; border-radius:16px; border-left:4px solid #d97a2b;">
+                                <div style="font-weight:700; font-size:0.85rem; color:#1a2a3a;">Digitalizzazione</div>
+                                <div style="font-size:0.75rem; color:#555;">💻 Piattaforme digitali, cloud, automazione documentale</div>
+                            </div>
+                        
+                    </div>
+                
+                    </div>
+                </div>
+            
+                <div style="background:white; border-radius:28px; margin-bottom:28px; overflow:hidden; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
+                    <div style="background:linear-gradient(135deg,#1a2a3a,#1a3a5a); color:white; padding:16px 24px;">
+                        <strong>📄 Studio aura J&amp;D</strong> - Punteggio: 61.4/100
+                    </div>
+                    <div style="padding:24px;">
+                        <div class="rating-badge rating-ammesso" style="margin-bottom:12px;">
+                            <span class="stars-rating">⭐⭐⭐</span>
+                            <span>✅ AMMESSA (Rating B+)</span>
+                        </div>
+                        <div class="rating-descrizione" style="margin-bottom:24px;">Startup sufficiente. Coerenza di base. Richiede qualche miglioramento.</div>
+                        
+                        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:16px; margin-bottom:24px;">
+                            
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">📋</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">COMPLETEZZA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">7.6<span style="font-size:0.75rem; color:#555;">/10</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:76%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">⚖️</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">COERENZA GIURIDICA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">9.0<span style="font-size:0.75rem; color:#555;">/12</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:75%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">💰</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">SOLIDITÀ FINANZIARIA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">6.5<span style="font-size:0.75rem; color:#555;">/15</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:43.333333333333336%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🎯</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">PIANO STRATEGICO</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">12.0<span style="font-size:0.75rem; color:#555;">/12</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:100%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🧠</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">CONSAPEVOLEZZA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">8.0<span style="font-size:0.75rem; color:#555;">/8</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:100%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🎨</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">BRANDING & DESIGN</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">6.5<span style="font-size:0.75rem; color:#555;">/8</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:81.25%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🚀</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">INNOVAZIONE</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">11.7<span style="font-size:0.75rem; color:#555;">/35</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:33.42857142857142%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                        </div>
+                        
+                    <div style="margin-top:20px; background:#f0f7ff; border-radius:20px; padding:20px;">
+                        <div style="display:flex; align-items:center; gap:14px; margin-bottom:16px; flex-wrap:wrap;">
+                            <div style="font-weight:800; font-size:1.1rem; color:#1a2a3a;">💡 Valutazione dell'idea</div>
+                            <div style="background:#dc2626; color:white; padding:6px 16px; border-radius:40px; font-size:0.8rem; font-weight:700;">
+                                ⚠️ LIMITATO
+                            </div>
+                            <div style="font-size:0.8rem; background:white; padding:4px 14px; border-radius:40px; color:#1a2a3a;">33.3/100</div>
+                        </div>
+                        <div style="background:#e6f0fa; border-radius:16px; padding:16px 20px; margin-bottom:16px; border-left:5px solid #d97a2b;">
+                            <div style="font-size:0.9rem; font-weight:700; color:#1a2a3a; margin-bottom:6px;">🎯 PERCHÉ QUESTO GIUDIZIO</div>
+                            <div style="font-size:0.85rem; color:#1a2a3a; line-height:1.5;">Idea poco originale. Necessario rivedere il concept. Originalità da migliorare. Modello di business tradizionale. Allineamento ai trend da migliorare.</div>
+                        </div>
+                        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px;">
+                            
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Originalità del concetto</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">4.0/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:26.666666666666668%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Innovazione nel modello di business</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">4.2/20</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:21.000000000000004%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Differenziazione dai competitor</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">3.0/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:20%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Allineamento ai trend</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">5.0/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:33.33333333333333%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Scalabilità e potenziale</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">6.5/10</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:65%; height:100%; background:#f59e0b; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Sostenibilità economica</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">5.0/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:33.33333333333333%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Innovazione sociale/ambientale</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">5.6/10</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:55.99999999999999%; height:100%; background:#f59e0b; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                        </div>
+                    </div>
+                
+                        
+                    <div style="margin-top:16px; background:#e6f0fa; border-radius:20px; padding:18px; border:1px solid #c5d5e8;">
+                        <div style="font-weight:800; margin-bottom:14px; color:#1a2a3a; display:flex; align-items:center; gap:10px;">
+                            <i class="fas fa-chart-line" style="color:#d97a2b;"></i> 📈 Trend di mercato rilevati
+                        </div>
+                        <div style="background:white; border-radius:16px; padding:12px; margin-bottom:14px;">
+                            💡 <strong>Cosa significa?</strong> Questi trend indicano che la Startup è allineata alle richieste del mercato nel 2026.
+                            Ogni trend soddisfatto aumenta le possibilità di successo dell'idea.
+                        </div>
+                        
+                            <div style="margin-bottom:12px; padding:12px; background:white; border-radius:16px; border-left:4px solid #d97a2b;">
+                                <div style="font-weight:700; font-size:0.85rem; color:#1a2a3a;">Digitalizzazione</div>
+                                <div style="font-size:0.75rem; color:#555;">💻 Piattaforme digitali, cloud, automazione documentale</div>
+                            </div>
+                        
+                    </div>
+                
+                    </div>
+                </div>
+            
+                <div style="background:white; border-radius:28px; margin-bottom:28px; overflow:hidden; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
+                    <div style="background:linear-gradient(135deg,#1a2a3a,#1a3a5a); color:white; padding:16px 24px;">
+                        <strong>📄 Caramelle x tutti</strong> - Punteggio: 60.7/100
+                    </div>
+                    <div style="padding:24px;">
+                        <div class="rating-badge rating-ammesso" style="margin-bottom:12px;">
+                            <span class="stars-rating">⭐⭐⭐</span>
+                            <span>✅ AMMESSA (Rating B+)</span>
+                        </div>
+                        <div class="rating-descrizione" style="margin-bottom:24px;">Startup sufficiente. Coerenza di base. Richiede qualche miglioramento.</div>
+                        
+                        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:16px; margin-bottom:24px;">
+                            
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">📋</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">COMPLETEZZA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">7.6<span style="font-size:0.75rem; color:#555;">/10</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:76%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">⚖️</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">COERENZA GIURIDICA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">9.0<span style="font-size:0.75rem; color:#555;">/12</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:75%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">💰</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">SOLIDITÀ FINANZIARIA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">6.5<span style="font-size:0.75rem; color:#555;">/15</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:43.333333333333336%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🎯</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">PIANO STRATEGICO</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">12.0<span style="font-size:0.75rem; color:#555;">/12</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:100%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🧠</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">CONSAPEVOLEZZA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">8.0<span style="font-size:0.75rem; color:#555;">/8</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:100%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🎨</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">BRANDING & DESIGN</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">6.5<span style="font-size:0.75rem; color:#555;">/8</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:81.25%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🚀</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">INNOVAZIONE</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">10.9<span style="font-size:0.75rem; color:#555;">/35</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:31.142857142857146%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                        </div>
+                        
+                    <div style="margin-top:20px; background:#f0f7ff; border-radius:20px; padding:20px;">
+                        <div style="display:flex; align-items:center; gap:14px; margin-bottom:16px; flex-wrap:wrap;">
+                            <div style="font-weight:800; font-size:1.1rem; color:#1a2a3a;">💡 Valutazione dell'idea</div>
+                            <div style="background:#dc2626; color:white; padding:6px 16px; border-radius:40px; font-size:0.8rem; font-weight:700;">
+                                ⚠️ LIMITATO
+                            </div>
+                            <div style="font-size:0.8rem; background:white; padding:4px 14px; border-radius:40px; color:#1a2a3a;">31.1/100</div>
+                        </div>
+                        <div style="background:#e6f0fa; border-radius:16px; padding:16px 20px; margin-bottom:16px; border-left:5px solid #d97a2b;">
+                            <div style="font-size:0.9rem; font-weight:700; color:#1a2a3a; margin-bottom:6px;">🎯 PERCHÉ QUESTO GIUDIZIO</div>
+                            <div style="font-size:0.85rem; color:#1a2a3a; line-height:1.5;">Idea poco originale. Necessario rivedere il concept. Originalità da migliorare. Modello di business tradizionale. Allineamento ai trend da migliorare.</div>
+                        </div>
+                        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px;">
+                            
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Originalità del concetto</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">4.0/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:26.666666666666668%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Innovazione nel modello di business</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">5.4/20</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:27%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Differenziazione dai competitor</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">3.0/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:20%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Allineamento ai trend</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">5.5/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:36.666666666666664%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Scalabilità e potenziale</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">5.0/10</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:50%; height:100%; background:#f59e0b; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Sostenibilità economica</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">5.0/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:33.33333333333333%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Innovazione sociale/ambientale</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">3.2/10</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:32%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                        </div>
+                    </div>
+                
+                        
+                    <div style="margin-top:16px; background:#e6f0fa; border-radius:20px; padding:18px; border:1px solid #c5d5e8;">
+                        <div style="font-weight:800; margin-bottom:14px; color:#1a2a3a; display:flex; align-items:center; gap:10px;">
+                            <i class="fas fa-chart-line" style="color:#d97a2b;"></i> 📈 Trend di mercato rilevati
+                        </div>
+                        <div style="background:white; border-radius:16px; padding:12px; margin-bottom:14px;">
+                            💡 <strong>Cosa significa?</strong> Questi trend indicano che la Startup è allineata alle richieste del mercato nel 2026.
+                            Ogni trend soddisfatto aumenta le possibilità di successo dell'idea.
+                        </div>
+                        
+                            <div style="margin-bottom:12px; padding:12px; background:white; border-radius:16px; border-left:4px solid #d97a2b;">
+                                <div style="font-weight:700; font-size:0.85rem; color:#1a2a3a;">Intelligenza Artificiale</div>
+                                <div style="font-size:0.75rem; color:#555;">🤖 L'AI automatizza processi come quotazioni, prenotazioni e ottimizzazione percorsi</div>
+                            </div>
+                        
+                    </div>
+                
+                    </div>
+                </div>
+            
+                <div style="background:white; border-radius:28px; margin-bottom:28px; overflow:hidden; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
+                    <div style="background:linear-gradient(135deg,#1a2a3a,#1a3a5a); color:white; padding:16px 24px;">
+                        <strong>📄 Rescio's rooms S.r.l.s.</strong> - Punteggio: 59.8/100
+                    </div>
+                    <div style="padding:24px;">
+                        <div class="rating-badge rating-riserva" style="margin-bottom:12px;">
+                            <span class="stars-rating">⭐⭐</span>
+                            <span>⚠️ AMMESSA CON RISERVA (Rating B)</span>
+                        </div>
+                        <div class="rating-descrizione" style="margin-bottom:24px;">Startup valida ma incompleta. Richiede correzioni su: skill del team, dettagli sui costi o garanzie sui beni.</div>
+                        
+                        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:16px; margin-bottom:24px;">
+                            
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">📋</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">COMPLETEZZA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">7.6<span style="font-size:0.75rem; color:#555;">/10</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:76%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">⚖️</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">COERENZA GIURIDICA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">9.0<span style="font-size:0.75rem; color:#555;">/12</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:75%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">💰</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">SOLIDITÀ FINANZIARIA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">6.5<span style="font-size:0.75rem; color:#555;">/15</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:43.333333333333336%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🎯</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">PIANO STRATEGICO</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">12.0<span style="font-size:0.75rem; color:#555;">/12</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:100%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🧠</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">CONSAPEVOLEZZA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">8.0<span style="font-size:0.75rem; color:#555;">/8</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:100%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🎨</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">BRANDING & DESIGN</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">6.5<span style="font-size:0.75rem; color:#555;">/8</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:81.25%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🚀</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">INNOVAZIONE</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">10.0<span style="font-size:0.75rem; color:#555;">/35</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:28.57142857142857%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                        </div>
+                        
+                    <div style="margin-top:20px; background:#f0f7ff; border-radius:20px; padding:20px;">
+                        <div style="display:flex; align-items:center; gap:14px; margin-bottom:16px; flex-wrap:wrap;">
+                            <div style="font-weight:800; font-size:1.1rem; color:#1a2a3a;">💡 Valutazione dell'idea</div>
+                            <div style="background:#dc2626; color:white; padding:6px 16px; border-radius:40px; font-size:0.8rem; font-weight:700;">
+                                ⚠️ LIMITATO
+                            </div>
+                            <div style="font-size:0.8rem; background:white; padding:4px 14px; border-radius:40px; color:#1a2a3a;">28.6/100</div>
+                        </div>
+                        <div style="background:#e6f0fa; border-radius:16px; padding:16px 20px; margin-bottom:16px; border-left:5px solid #d97a2b;">
+                            <div style="font-size:0.9rem; font-weight:700; color:#1a2a3a; margin-bottom:6px;">🎯 PERCHÉ QUESTO GIUDIZIO</div>
+                            <div style="font-size:0.85rem; color:#1a2a3a; line-height:1.5;">Idea poco originale. Necessario rivedere il concept. Originalità da migliorare. Modello di business tradizionale. Allineamento ai trend da migliorare.</div>
+                        </div>
+                        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px;">
+                            
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Originalità del concetto</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">4.0/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:26.666666666666668%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Innovazione nel modello di business</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">3.0/20</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:15%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Differenziazione dai competitor</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">3.0/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:20%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Allineamento ai trend</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">3.0/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:20%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Scalabilità e potenziale</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">5.0/10</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:50%; height:100%; background:#f59e0b; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Sostenibilità economica</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">5.0/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:33.33333333333333%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Innovazione sociale/ambientale</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">5.6/10</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:55.99999999999999%; height:100%; background:#f59e0b; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                        </div>
+                    </div>
+                
+                        
+                    </div>
+                </div>
+            
+                <div style="background:white; border-radius:28px; margin-bottom:28px; overflow:hidden; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
+                    <div style="background:linear-gradient(135deg,#1a2a3a,#1a3a5a); color:white; padding:16px 24px;">
+                        <strong>📄 Studio Creazione armi Tommy&amp;Depa</strong> - Punteggio: 58.9/100
+                    </div>
+                    <div style="padding:24px;">
+                        <div class="rating-badge rating-riserva" style="margin-bottom:12px;">
+                            <span class="stars-rating">⭐⭐</span>
+                            <span>⚠️ AMMESSA CON RISERVA (Rating B)</span>
+                        </div>
+                        <div class="rating-descrizione" style="margin-bottom:24px;">Startup valida ma incompleta. Richiede correzioni su: skill del team, dettagli sui costi o garanzie sui beni.</div>
+                        
+                        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:16px; margin-bottom:24px;">
+                            
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">📋</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">COMPLETEZZA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">6.3<span style="font-size:0.75rem; color:#555;">/10</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:63%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">⚖️</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">COERENZA GIURIDICA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">6.5<span style="font-size:0.75rem; color:#555;">/12</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:54.166666666666664%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">💰</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">SOLIDITÀ FINANZIARIA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">6.5<span style="font-size:0.75rem; color:#555;">/15</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:43.333333333333336%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🎯</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">PIANO STRATEGICO</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">12.0<span style="font-size:0.75rem; color:#555;">/12</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:100%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🧠</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">CONSAPEVOLEZZA</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">8.0<span style="font-size:0.75rem; color:#555;">/8</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:100%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🎨</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">BRANDING & DESIGN</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">6.5<span style="font-size:0.75rem; color:#555;">/8</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:81.25%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                    <div style="background:#f5f7fa; border-radius:20px; padding:14px; text-align:center; border:1px solid #e0e4e8;">
+                        <div style="font-size:1.4rem;">🚀</div>
+                        <div style="font-size:0.75rem; font-weight:800; margin:8px 0; color:#1a2a3a;">INNOVAZIONE</div>
+                        <div style="font-size:1.2rem; font-weight:800; color:#1a2a3a;">12.8<span style="font-size:0.75rem; color:#555;">/35</span></div>
+                        <div style="height:6px; background:#e2e8f0; border-radius:3px; margin:10px 0;"><div style="width:36.57142857142857%; height:100%; background:#06b6d4; border-radius:3px;"></div></div>
+                    </div>
+                
+                        </div>
+                        
+                    <div style="margin-top:20px; background:#f0f7ff; border-radius:20px; padding:20px;">
+                        <div style="display:flex; align-items:center; gap:14px; margin-bottom:16px; flex-wrap:wrap;">
+                            <div style="font-weight:800; font-size:1.1rem; color:#1a2a3a;">💡 Valutazione dell'idea</div>
+                            <div style="background:#dc2626; color:white; padding:6px 16px; border-radius:40px; font-size:0.8rem; font-weight:700;">
+                                ⚠️ LIMITATO
+                            </div>
+                            <div style="font-size:0.8rem; background:white; padding:4px 14px; border-radius:40px; color:#1a2a3a;">36.7/100</div>
+                        </div>
+                        <div style="background:#e6f0fa; border-radius:16px; padding:16px 20px; margin-bottom:16px; border-left:5px solid #d97a2b;">
+                            <div style="font-size:0.9rem; font-weight:700; color:#1a2a3a; margin-bottom:6px;">🎯 PERCHÉ QUESTO GIUDIZIO</div>
+                            <div style="font-size:0.85rem; color:#1a2a3a; line-height:1.5;">Idea poco originale. Necessario rivedere il concept. Originalità da migliorare. Modello di business tradizionale.</div>
+                        </div>
+                        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px;">
+                            
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Originalità del concetto</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">4.0/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:26.666666666666668%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Innovazione nel modello di business</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">5.4/20</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:27%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Differenziazione dai competitor</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">3.0/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:20%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Allineamento ai trend</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">7.5/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:50%; height:100%; background:#f59e0b; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Scalabilità e potenziale</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">5.0/10</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:50%; height:100%; background:#f59e0b; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Sostenibilità economica</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">5.0/15</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:33.33333333333333%; height:100%; background:#ef4444; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                                    <div>
+                                        <div style="font-size:0.7rem; font-weight:700; color:#1a2a3a;">Innovazione sociale/ambientale</div>
+                                        <div style="font-size:0.9rem; font-weight:800; color:#1a2a3a;">6.8/10</div>
+                                        <div style="height:5px; background:#e2e8f0; border-radius:3px; margin-top:5px;"><div style="width:68%; height:100%; background:#f59e0b; border-radius:3px;"></div></div>
+                                    </div>
+                                
+                        </div>
+                    </div>
+                
+                        
+                    <div style="margin-top:16px; background:#e6f0fa; border-radius:20px; padding:18px; border:1px solid #c5d5e8;">
+                        <div style="font-weight:800; margin-bottom:14px; color:#1a2a3a; display:flex; align-items:center; gap:10px;">
+                            <i class="fas fa-chart-line" style="color:#d97a2b;"></i> 📈 Trend di mercato rilevati
+                        </div>
+                        <div style="background:white; border-radius:16px; padding:12px; margin-bottom:14px;">
+                            💡 <strong>Cosa significa?</strong> Questi trend indicano che la Startup è allineata alle richieste del mercato nel 2026.
+                            Ogni trend soddisfatto aumenta le possibilità di successo dell'idea.
+                        </div>
+                        
+                            <div style="margin-bottom:12px; padding:12px; background:white; border-radius:16px; border-left:4px solid #d97a2b;">
+                                <div style="font-weight:700; font-size:0.85rem; color:#1a2a3a;">Intelligenza Artificiale</div>
+                                <div style="font-size:0.75rem; color:#555;">🤖 L'AI automatizza processi come quotazioni, prenotazioni e ottimizzazione percorsi</div>
+                            </div>
+                        
+                            <div style="margin-bottom:12px; padding:12px; background:white; border-radius:16px; border-left:4px solid #d97a2b;">
+                                <div style="font-weight:700; font-size:0.85rem; color:#1a2a3a;">Digitalizzazione</div>
+                                <div style="font-size:0.75rem; color:#555;">💻 Piattaforme digitali, cloud, automazione documentale</div>
+                            </div>
+                        
+                    </div>
+                
+                    </div>
+                </div>
+            
+            
+            <div class="footer">
+                <p>🎯 Soglia finanziamento: 60/100 | 📅 Report del 11/05/2026, 08:02:06</p>
+                <p style="margin-top:8px;">⭐ RATING: ⭐⭐⭐⭐⭐ (80-100) | ⭐⭐⭐⭐ (70-79) | ⭐⭐⭐ (60-69) | ⭐⭐ (50-59) | ⭐ (&lt;50)</p>
+                <p style="margin-top:8px;">🚀 INNOVAZIONE (35 punti): valuta originalità, modello di business, trend, scalabilità e impatto sociale</p>
+            </div>
+        </div>
+        </body></html>
